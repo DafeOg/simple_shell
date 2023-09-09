@@ -10,7 +10,7 @@
 int for_command_execution(dataSHLL *datshell)
 {
 	pid_t pd = fork(), wpy;
-	int stt, exc;
+	int stt = 0, exc;
 	char *dir;
 	(void)wpy;
 
