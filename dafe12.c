@@ -91,7 +91,7 @@ void authenticate_asst_Ext(void)
 
 char *print_message(char option)
 {
-	char *msges;
+	char *msges = NULL;
 
 	if (option == 'i')
 		msges = ": Invalid option ";
