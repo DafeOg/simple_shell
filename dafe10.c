@@ -9,7 +9,7 @@
 
 int for_command_execution(dataSHLL *datshell)
 {
-	pid_t pd, wpy;
+	pid_t pd = fork(), wpy;
 	int stt, exc;
 	char *dir;
 	(void)wpy;
@@ -23,7 +23,7 @@ int for_command_execution(dataSHLL *datshell)
 		if (confirm_for_error(dir, datshell) == 1)
 			return (1);
 	}
-	pd = fork();
+	/* pd = fork(); */
 	if (pd == 0)
 	{
 		if (exc == 0)
